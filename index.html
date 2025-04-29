@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Smoothie Sip - Fresh and healthy smoothies made with natural ingredients.">
+    <title>Smoothie Sip</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="images/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <img src="images/logo1.png" alt="Smoothie Sip Logo" class="logo">
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#Order">Order</a>
+        <a href="#contact">Contact</a>
+        <!-- Cart Icon -->
+        <a href="#" id="cart-icon">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+</header>
+
+<audio id="bg-audio" loop>
+    <source src="audio/audio.mp3" type="audio/mp3">
+  </audio>
+  
+  <!-- Play button to start the audio -->
+  <button onclick="document.getElementById('bg-audio').play()">Unmute</button>
+  <button onclick="document.getElementById('bg-audio').pause()">Mute</button>
+
+<!-- Cart Section -->
+<section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items">
+        <!-- Items will be listed here -->
+    </ul>
+    <p>Total: $<span id="total-price">0</span></p>
+    <button id="checkout-btn">Checkout</button>
+    <button id="close-cart-btn">Close</button>
+</section>
+
+<!-- Videos -->
+<section id="hero" class="hero">
+    <h1>Welcome to Smoothie Sip</h1>
+    <p>Your go-to place for refreshing, healthy smoothies.</p>
+    <section id="videos" class="videos">
+        <h2>Always Fresh!</h2>
+        <div class="video-container">
+            <div class="video-item">
+                <video autoplay loop muted>
+                    <source src="videos/cutting.mp4" type="video/mp4">
+                   
+                </video>
+            </div>
+            <div class="video-item">
+                <video autoplay loop muted>
+                    <source src="videos/mixing.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+            <div class="video-item">
+                <video autoplay loop muted>
+                    <source src="videos/smoothie.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Our story -->
+<section id="our-story" class="our-story">
+    <div class="story-container">
+        <div class="story-text">
+            <h2>Our Story</h2>
+            <p>At Smoothie Sip, we believe in fresh, natural ingredients. Our smoothies are made with love and care, bringing you the best of nature in every sip! We are dedicated to offering our customers a refreshing, nutritious drink that is both delicious and satisfying. Each smoothie is crafted with the highest quality ingredients, and we pride ourselves on creating unique blends that fuel your body and delight your taste buds.</p>
+        </div>
+        <div class="story-image-container">
+            <img src="images/smoothies1.png" alt="Our Story" class="story-image">
+        </div>
+    </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="menu-slider">
+    <h2>Our Menu</h2>
+
+    <div class="menu-item active" data-price="5.99">
+        <img src="images/strawberry2.png" alt="Strawberry Smoothie" class="menu-image">
+        <h3>Strawberry Smoothie</h3>
+        <h2> $5.99</h2>
+        <p>A classic favorite, our Strawberry Smoothie is made with fresh, ripe strawberries blended to perfection. This smooth and sweet treat is bursting with vitamin C and antioxidants, making it a delicious and refreshing way to brighten your day!.</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-price="5.99">
+        <img src="images/passion2.png" alt="Passion Fruit Smoothie" class="menu-image">
+        <h3>Passion Fruit Smoothie</h3>
+        <h2> $5.99</h2>
+        <p>Experience the tropical tang of passion fruit in this refreshing smoothie. With its unique, sweet-tart flavor, it’s a perfect combination of exotic and fruity. Rich in vitamins A and C, this smoothie is not only a treat for your taste buds but also great for your skin and overall wellness.</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-price="5.99">
+        <img src="images/kiwi2.png" alt="Kiwi Smoothie" class="menu-image">
+        <h3>Kiwi Smoothie</h3>
+        <h2> $5.99</h2>
+        <p>Tart, tangy, and full of zest, our Kiwi Smoothie is packed with the vibrant flavor of fresh kiwis. This smoothie is rich in vitamin C and fiber, making it a perfect, healthy choice for a boost of energy. It’s a refreshing and nutrient-packed option that will leave you feeling revitalized!</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <button class="arrow left">&#10094;</button>
+    <button class="arrow right">&#10095;</button>
+</section>
+
+<!-- make ur own smoothie -->
+<section id="Order">
+<h1>Make your own Smoothie</h1>
+
+    <!-- Fruits Selection -->
+    <h3>Select Fruits (1-3)</h3>
+    <div class="selection-group">
+        
+        <label>
+            <img src="images/strawberries.png" alt="Strawberry">
+            <input type="checkbox" class="fruit" value="Strawberry" data-price="1.33">
+        </label>
+        <label>
+            <img src="images/mixed_berries.png" alt="Mixed Berries">
+            <input type="checkbox" class="fruit" value="Mixed Berries" data-price="1.33">
+        </label>
+        <label>
+            <img src="images/bananas.png" alt="Banana">
+            <input type="checkbox" class="fruit" value="Banana" data-price="1.33">
+        </label>
+        <label>
+            <img src="images/mango.png" alt="Mango">
+            <input type="checkbox" class="fruit" value="Mango" data-price="1.33">
+        </label>
+        <label>
+            <img src="images/passion.png" alt="Passion">
+            <input type="checkbox" class="fruit" value="Passion" data-price="1.33">
+        </label>
+        <label>
+            <img src="images/kiwi-fruit.png" alt="Kiwi">
+            <input type="checkbox" class="fruit" value="Kiwi" data-price="1.33">
+        </label>
+        <label>
+            <img src="images/dates.png" alt="Dates">
+            <input type="checkbox" class="fruit" value="Dates" data-price="1.33">
+        </label>
+    </div>
+
+    <!-- Nuts Selection -->
+    <h3>Select Nuts (0-1)</h3>
+    <div class="selection-group">
+        <label>
+            <img src="images/pecan.png" alt="Pecan">
+            <input type="checkbox" class="nuts" value="Pecan" data-price="0.53">
+        </label>
+        <label>
+            <img src="images/almonde.png" alt="Almond">
+            <input type="checkbox" class="nuts" value="Almond" data-price="0.53">
+        </label>
+        <label>
+            <img src="images/walnuts.png" alt="walnuts">
+            <input type="checkbox" class="nuts" value="walnuts" data-price="0.53">
+        </label>
+    </div>
+
+    <!-- Milk Selection -->
+    <h3>Select Milk</h3>
+    <div class="selection-group">
+        <button class="milk" data-price="1.33">Dairy Milk</button>
+        <button class="milk" data-price="1.33">Soy Milk</button>
+        <button class="milk" data-price="1.33">Almond Milk</button>
+    </div>
+
+    <!-- Greek Yogurt -->
+    <h3>Greek Yogurt (optional)</h3>
+    <div class="selection-group">
+        <label>
+            <img src="images/greek-yogurt.png" alt="Greek Yogurt">
+            <input type="checkbox" class="extra" value="Greek Yogurt" data-price="1.59">
+        </label>
+    </div>
+
+    <!-- Add to Cart -->
+    <button id="add-to-cart">Add to Cart</button>
+
+</section>
+
+<!-- contact us -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+  
+      <button type="submit">Submit</button>
+    </form>
+  
+    <p><strong>Phone:</strong> +973 17899023</p>
+    <p><strong>Email:</strong> <a href="mailto:smoothie.sip@gmail.com">smoothie.sip@gmail.com</a></p>
+  
+    <p><strong>Our Office:</strong> Manama, 2nd floor</p>
+    <a href="https://goo.gl/maps/xyz" target="_blank">View on Google Maps</a>
+  
+    <p>Follow us on:</p>
+    <a href="https://www.facebook.com/yourpage" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com/yourpage" target="_blank">Instagram</a> |
+    <a href="https://twitter.com/yourpage" target="_blank">Twitter</a>
+  
+    <p><strong>Business Hours:</strong></p>
+    <ul>
+      <li>Sunday - Thursday: 9 AM - 10 PM</li>
+      <li>Friday - Saturday: 10 AM - 11 PM</li>
+    </ul>
+  
+    <p>If you have any questions or need assistance, feel free to reach out! We're here to help.</p>
+  </section>
+
+<footer>
+    <p>&copy; 2025 Smoothie Sip. All rights reserved.</p>
+</footer>
+
+<!-- js -->
+<script src="scripts.js"></script>
+</body>
+</html> 
